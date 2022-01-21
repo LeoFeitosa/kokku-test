@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBattle", "AutoBattle.csproj", "{393715A8-CAE1-46CB-B73F-30F6AF78A99C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393715A8-CAE1-46CB-B73F-30F6AF78A99C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393715A8-CAE1-46CB-B73F-30F6AF78A99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393715A8-CAE1-46CB-B73F-30F6AF78A99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393715A8-CAE1-46CB-B73F-30F6AF78A99C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5090B05-E583-4EBD-9C10-FD91D467596A}
+	EndGlobalSection
+EndGlobal

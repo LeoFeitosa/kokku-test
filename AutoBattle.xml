@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoBattle</name>
+    </assembly>
+    <members>
+        <member name="T:AutoBattle.Character">
+            <summary>
+            This is the class that controls the characters
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.TakeDamage">
+            <summary>
+            Reduces player's health and checks if it's still greater than 0
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.Die">
+            <summary>
+            Informs that the player has died and prevents movement
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.WalkTO(System.Boolean)">
+            <summary>
+            Defines whether players can move
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.StartTurn(AutoBattle.Grid)">
+            <summary>
+            Check when to attack and walk towards the opponent
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.MoveTowardsOpponent(AutoBattle.Grid)">
+            <summary>
+            If there is no target close enough, calculates in wich direction this character should move to be closer to a possible target
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.CheckCloseTargets(AutoBattle.Grid)">
+            <summary>
+            Check in x and y directions if there is any character close enough to be a target
+            </summary>     
+            <returns>If it is a target, it returns true, if not, it returns false</returns>    
+        </member>
+        <member name="M:AutoBattle.Character.Attack(AutoBattle.Character)">
+            <summary>
+            Displays players attack and remaining health
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.ShowPlayerDirection(System.String)">
+            <summary>
+            Displays the player's name and which direction he is walking
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Character.ValidatePlayerName(System.String)">
+            <summary>
+            Detects if it's a player or if it's an enemy
+            </summary>
+            <param name="playerName">Player's name</param>
+            <returns>Returns a string as the player's name</returns>
+        </member>
+        <member name="T:AutoBattle.GameMode">
+            <summary>
+            This is the class that creates players and defines your data
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.Setup">
+            <summary>
+            Set variables and call necessary methods to start the game
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.GetPlayerChoice">
+            <summary>
+            Displays and records class options for the player
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.CreatePlayerCharacter(System.Int32)">
+            <summary>
+            Choose the player's class based on the parameter received and set a name for him
+            </summary>
+            <param name="classIndex">Player class id</param> 
+        </member>
+        <member name="M:AutoBattle.GameMode.CreateEnemyCharacter">
+            <summary>
+            Randomly choose the enemy class and set up vital variables
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.GetDefaultCharacterData(AutoBattle.Types.CharacterClass)">
+            <summary>
+            Default dice set for player
+            </summary>
+            <returns>Returns a player with standard dice</returns>
+        </member>
+        <member name="M:AutoBattle.GameMode.StartGame">
+            <summary>
+            Create a list with all players
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.StartTurn">
+            <summary>
+            Start the round with the random starting player
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.HandleTurn">
+            <summary>
+            Checks if one of the players still has health greater than 0
+            </summary>
+            <remarks>If the condition is positive, the StartTurn() method is called</remarks>
+        </member>
+        <member name="M:AutoBattle.GameMode.GetRandomInt(System.Int32,System.Int32)">
+            <summary>
+            Generate a random integer value
+            </summary>
+            <param name="min">Minimum integer value</param>
+            <param name="max">Maximum integer value</param>
+            <returns>Random number between Min and Max</returns>
+            <remarks>Whole numbers must be greater than zero</remarks>
+        </member>
+        <member name="M:AutoBattle.GameMode.AlocatePlayers">
+            <summary>
+            Calls the functions that will position the players
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.AlocatePlayerCharacter">
+            <summary>
+            Repositions player on the grid
+            </summary>
+        </member>
+        <member name="M:AutoBattle.GameMode.AlocateEnemyCharacter">
+            <summary>
+            Repositions enemy on the grid
+            </summary>
+        </member>
+        <member name="T:AutoBattle.Grid">
+            <summary>
+            This is the class that draws the grids
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Grid.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Create a list of grid positions
+            </summary>
+        </member>
+        <member name="M:AutoBattle.Grid.DrawBattlefield(System.Int32,System.Int32)">
+            <summary>
+            Displays the matrix that indicates the pieces of the battlefield and if it is marked as occupied, the marking has a different color
+            </summary>
+        </member>
+        <member name="T:AutoBattle.Program">
+            <summary>
+            This is the class that starts the program
+            </summary>
+        </member>
+        <member name="T:AutoBattle.Types">
+            <summary>
+            This is the class that defines the data types
+            </summary>
+        </member>
+        <member name="T:AutoBattle.Types.GridBox">
+            <summary>
+            Defines the coordinates inside the grid if it is busy or not and the index
+            </summary>
+        </member>
+        <member name="T:AutoBattle.Types.CharacterClass">
+            <summary>
+            Set the numbers corresponding to each character class
+            </summary>
+        </member>
+    </members>
+</doc>
